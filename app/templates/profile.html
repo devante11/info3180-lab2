@@ -1,0 +1,58 @@
+{% extends "base.html"}
+
+{% block content}
+
+<link rel = "stylesheet" type = "text/css" href = {{ url_for('static' , filename='css/app.css') }}>
+
+
+
+<section class = "wrapper">
+    <div class = "pro">
+        <img id="Profile picture" src= "{{ url_for('static', filename='profile_picture.jpg') }}" width= 100px height=100px>
+        <h1>Devante williams</h1>
+
+        <ul> 
+            <li>@DrogbaTheGoat</li>
+            <li>Havendale, Kingston</li>
+            <li>{{ date_joined }}</li>
+        </ul>
+        
+    </div>
+
+
+
+    <div class = "pro1">
+        <section class="intro">
+
+            <p> lover of sports and somewhat of a public figure.</p>
+        </section>
+
+
+        <ul class="postsy">
+            <li class="content">
+                <p class="value">10</p>
+                <p class="tag">Posts</p>
+            </li>
+
+
+            <li class="content">
+                <p class="value">25</p>
+                <p class="tag">Following</p>
+            </li>
+
+            <li class="content">
+                <p class="value">1000</p>
+                <p class="tag">Followers</p>
+            </li>
+
+        </ul>
+
+    </div>
+             <button> Follow </button>
+    </div>
+
+</section>
+
+
+{% endblock %}
+

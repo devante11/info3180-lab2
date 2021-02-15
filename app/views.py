@@ -8,6 +8,9 @@ This file creates your application.
 from app import app
 from flask import render_template, request, redirect, url_for, flash
 
+import datetime
+
+
 
 ###
 # Routing for your application.
@@ -19,21 +22,50 @@ def home():
     return render_template('home.html')
 
 
+
+
+
+
+
 @app.route('/about/')
 def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
 
 
+
+
+
 ###
 # The functions below should be applicable to all Flask apps.
 ###
+
+def formate_date_joined():
+	date_joined = datetime.date(2021,2,13)
+	return "joined" + date_joined.strftime("%B,%Y")
+
+
+
+
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
     """Send your static text file."""
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
+
+
+
+
+
+
+@app.route(/profile)
+def profile():
+	return render_template('profile.html', date = format_date_joined())
+
+
+
+
 
 
 @app.after_request
@@ -48,10 +80,19 @@ def add_header(response):
     return response
 
 
+
+
+
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+
+
+
 
 
 if __name__ == '__main__':

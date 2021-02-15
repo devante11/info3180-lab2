@@ -1,0 +1,111 @@
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.profile_Panel{
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+    background-color: #f2f2f2e3;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    height: auto;
+
+
+}
+
+.follow__button_container{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.SubPanel{
+    display:grid;
+    grid-template: 1fr 1fr 1fr/1fr 4fr 1fr;
+    height:100%;
+    padding: 4px;
+    
+}
+
+#Content_Panel_1{
+
+    width: 100%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start:2;
+    grid-column-end: 3;
+
+
+}
+
+#Content_Panel_2{
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start:1;
+    grid-column-end: 4;
+    
+}
+
+#Content_Panel_3{
+
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start:1;
+    grid-column-end: 4;
+    
+    
+}
+
+#Sub_Panel_1{
+   
+    background-color:#93c2ff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start:1;
+    grid-column-end: 2;
+
+
+}
+
+#Sub_Panel_1{
+    background-color: #f2f2f2e3;
+    height: 1fr;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+ 
+
+
+}
+
+#follow_button{
+    background-color: #1596ff;
+    border-radius: 15px;
+    width:35%;
+    height:50%;
+    
+}
+
+#follow_button:hover{
+    background-color: #1596ffc0;
+    cursor: pointer;
+
+}
+
+
+#Profile_Picture{
+    border-radius: 50%;
+    width: 40%;
+    height: 40%;
+
+}
+
+ 
